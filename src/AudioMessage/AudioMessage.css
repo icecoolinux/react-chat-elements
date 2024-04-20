@@ -3,6 +3,10 @@
   max-width: 300px;
 }
 
+.rce-mbox-audioplayer {
+    margin-bottom: 10px;
+}
+
 audio:focus {
   outline: none;
 }

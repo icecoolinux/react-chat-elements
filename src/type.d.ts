@@ -154,20 +154,20 @@ export interface IMessage {
   id: string | number
   position: string
   text: string
-  title: string
-  focus: boolean
-  date: number | Date
+  title?: string //change to optional
+  focus?: boolean //change to optional
+  date?: number | Date //change to optional
   dateString?: string
   avatar?: string
-  titleColor: string
-  forwarded: boolean
-  replyButton: boolean
-  removeButton: boolean
-  status: 'waiting' | 'sent' | 'received' | 'read'
+  titleColor?: string //change to optional
+  forwarded?: boolean //change to optional
+  replyButton?: boolean //change to optional
+  removeButton?: boolean //change to optional
+  status?: 'waiting' | 'sent' | 'received' | 'read' //change to optional
   statusTitle?: string
-  notch: boolean
+  notch?: boolean //change to optional
   copiableDate?: boolean
-  retracted: boolean
+  retracted?: boolean //change to optional
   className?: string
   letterItem?: ILetterItem
   reply?: IReplyMessage | any
@@ -379,6 +379,7 @@ export interface IAudioMessage extends IMessage {
     id?: string
     audioType?: 'audio/mp3' | string
     controlsList?: string
+    autoPlay?: boolean
   }
 }
 

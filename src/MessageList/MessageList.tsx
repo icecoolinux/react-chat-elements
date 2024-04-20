@@ -135,6 +135,28 @@ const MessageList: FC<IMessageListProps> = ({
     <div className={classNames(['rce-container-mlist', props.className])} {...props.customProps}>
       {!!props.children && props.isShowChild && props.children}
       <div ref={referance} onScroll={onScroll} className='rce-mlist'>
+
+      <MessageBox
+            id={888}
+            key={888}
+            position={'left'}
+            type={'audio'}
+            title={'title'}
+            text={'this is the text'}
+            data={{audioURL: "https://www.kozco.com/tech/LRMonoPhase4.mp3", autoPlay:true }}
+/*
+            focus={false}
+            date={new Date()}
+            titleColor={null}
+            forwarded={null}
+            replyButton={null}
+            removeButton={null}
+            status={null}
+            notch={true}
+            retracted={null}
+*/
+        />
+
         {props.dataSource.map((x, i: number) => (
           <MessageBox
             key={i as Key}
