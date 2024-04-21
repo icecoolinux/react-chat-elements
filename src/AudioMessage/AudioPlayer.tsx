@@ -57,7 +57,7 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, type, autoPlay = false }
     return (
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <button onClick={togglePlayPause} style={{ border: 'none', background: 'transparent' }}>
-                <img src={isPlaying ? pauseImageUrl : playImageUrl} alt={isPlaying ? 'Pause' : 'Play'} style={{ width: '24px', height: '24px' }} />
+                <img src={isPlaying ? pauseImageUrl : playImageUrl} alt={isPlaying ? 'Pause' : 'Play'} style={{ width: '32px', height: '32px' }} />
             </button>
             <span>{formattedTime(currentTime)} / {formattedTime(duration)}</span>
             <input
