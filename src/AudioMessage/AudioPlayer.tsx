@@ -51,8 +51,8 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, type, autoPlay = false }
     };
 
     // URLs for the play and pause images
-    const playImageUrl = '/images/play.png'; // Change this to the path of your play image
-    const pauseImageUrl = '/images/pause.png'; // Change this to the path of your pause image
+    const playImageUrl = '/icons/audiocontrol_play.png'; // Change this to the path of your play image
+    const pauseImageUrl = '/icons/audiocontrol_pause.png'; // Change this to the path of your pause image
 
     return (
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
