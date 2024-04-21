@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons';
 
 interface AudioPlayerProps {
     src: string;
@@ -52,10 +50,14 @@ const AudioPlayer: React.FC<AudioPlayerProps> = ({ src, type, autoPlay = false }
         return `${Math.floor(time / 60)}:${('0' + Math.floor(time % 60)).slice(-2)}`;
     };
 
+    // URLs for the play and pause images
+    const playImageUrl = '/images/play.png'; // Change this to the path of your play image
+    const pauseImageUrl = '/images/pause.png'; // Change this to the path of your pause image
+
     return (
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <button onClick={togglePlayPause} style={{ border: 'none', background: 'transparent' }}>
-                <FontAwesomeIcon icon={isPlaying ? faPause : faPlay} size="3x" />
+                <img src={isPlaying ? pauseImageUrl : playImageUrl} alt={isPlaying ? 'Pause' : 'Play'} style={{ width: '24px', height: '24px' }} />
             </button>
             <span>{formattedTime(currentTime)} / {formattedTime(duration)}</span>
             <input
